@@ -1,0 +1,54 @@
+body{
+    max-width: 80%;
+    margin: auto;
+}
+.details-area{
+    display: flex;
+    justify-content: center;
+}
+.country-details-area{
+    margin-top: 20px;
+    height: 400px;
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: -4px 0px 74px 8.5px rgba(137, 43, 226, 0.411);
+}
+#countries-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+.flags{
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.flags-div{
+    padding: 10px;
+    width: 350px;
+    height: 156px;
+    border: 1px solid;
+    background-color: rgba(100, 100, 220, 0.921);
+    color: aliceblue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.flag-img-div{
+    height: 80px;
+
+}
+.flag-div-butn{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: rgba(52, 29, 199, 0.715);
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 60px;
+}
