@@ -14,6 +14,11 @@ body{
     border-radius: 20px;
     box-shadow: -4px 0px 74px 8.5px rgba(137, 43, 226, 0.411);
 }
+.heading{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
 .showFlag{
     border-radius: 10px;
     width: 250px;
