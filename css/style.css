@@ -10,10 +10,29 @@ body{
     margin-top: 20px;
     height: 400px;
     width: 800px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(108, 41, 203);
     border-radius: 20px;
     box-shadow: -4px 0px 74px 8.5px rgba(137, 43, 226, 0.411);
 }
+.showFlag{
+    border-radius: 10px;
+    width: 250px;
+
+}
+
+.display-container{
+    display: flex;
+    justify-content: space-between;
+}
+#country-details-area{
+    padding: 20px 30px;
+    padding-right: 100px;
+}
+.country-info{
+    color: white;
+}
+
+
 #countries-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -23,6 +42,21 @@ body{
     width: 100px;
     margin-right: 20px;
     border-radius: 10px;
+}
+.icon>i{
+    font-size: 35px;
+    color: white;
+    margin-top: 40px;
+    margin-left: 110px;
+
+}
+.coatofarms{
+    width: 100px;
+    margin-left: 20px;
+}
+.Arms-div{
+    margin-left: 50px;
+    color: white;
 }
 .flags-div{
     padding: 10px;
