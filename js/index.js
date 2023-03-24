@@ -1,13 +1,23 @@
-const countries = ()=>{
-    fetch('https://restcountries.com/v3.1/all')
+const countries = (search)=>{
+    const url =`https://restcountries.com/v3.1/name/${search}`
+    fetch(url)
+    //'https://restcountries.com/v3.1/all'
+    .then(res=>res.json())
+    .then(data=>displayCountries(data))
+}
+const countriesall = ()=>{
+    const url ='https://restcountries.com/v3.1/all'
+    fetch(url)
+    //
     .then(res=>res.json())
     .then(data=>displayCountries(data))
 }
 
 const displayCountries = country =>{
     const countriesContainer = document.getElementById('countries-container')
+    countriesContainer.innerHTML =``;
     country.forEach(element => {
-        console.log(element.name.common);
+        // console.log(element.name.common);
         const CreatDiv = document.createElement('div');
         CreatDiv.innerHTML = `
         <div class="flags-div">
@@ -35,6 +45,7 @@ const loadCountryDetails = (code)=>{
 const displayCountryDetails = country=>{
     // <img class="showFlag" src="${country.coatOfArms.png}">
     const countryArea = document.getElementById('country-details-area');
+    
     countryArea.innerHTML=`
     <div class="display-container">
         <div class="flagImg">
@@ -66,4 +77,21 @@ const displayCountryDetails = country=>{
     </div>
     `
 }
-countries();
+
+
+const searching = (search)=>{
+    const url =`https://restcountries.com/v3.1/name/${search}`
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>search(data))
+}
+
+const search=()=>{
+    const searchInput = document.getElementById('searchCountry');
+    const searchfild = searchInput.value;
+    countries(searchfild);
+    searchInput.value ='';
+    
+}
+
+countriesall();
